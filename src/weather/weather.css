@@ -1,0 +1,131 @@
+.weather-container{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.weather-form{
+    display:flex;
+    justify-content:center;
+    position: relative;
+    top:50px;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+.search-text{
+  height: 6vh;
+  width: 70%;
+  transition: all .5s ease-in-out;
+  border-radius: 10px;
+  border: 1px solid dodgerblue;
+  outline: none;
+  box-shadow: .3px .3px 3px black;
+  background-color: transparent;
+  text-transform: capitalize;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 28px;
+  color:black;
+}
+
+.search-text:focus{
+    color: black;
+    text-transform: capitalize;
+    box-shadow: .5px .5px 5px black;
+}
+.search-text::placeholder{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.search-icon {
+    height: 55px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid dodgerblue;
+    background-color: lightgray;
+    right: 63px;
+    transition: all .5s ease-in-out;
+}
+
+.search-icon:hover{
+  cursor: pointer;
+}
+
+
+.weather-info{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top:100px;
+    height: 50%;
+   border: .3px solid dodgerblue;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: .10px .10px 30px  lightblue;
+}
+
+.weather-card{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    position: relative;
+    top:50px;
+    transform: skewX(10deg);
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    color: red;
+    text-shadow: .1px .1px 10px black;
+}
+
+.weather-title{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: .3px .3px 5px dodgerblue;
+}
+.wind, .pressure,.temp-max, .humidity{
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 150px;
+    border-bottom: .3px solid dodgerblue;
+    font-weight: bold;
+    text-shadow: .3px .3px 3px dodgerblue;
+}
+:is(.wind, .pressure,.temp-max, .humidity):hover{
+    color: blue;
+}
+
+.description{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+.weather-body{
+    border: .3px solid dodgerblue;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px;
+}
+
+@media (max-width:800px){
+    .weather-form{
+        width: 80%;
+    }
+}
